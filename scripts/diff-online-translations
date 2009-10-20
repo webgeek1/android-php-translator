@@ -1,0 +1,12 @@
+
+echo 'Get remote translation files from FTP.'
+rm -rf res
+ncftpget -u droid -R -F transdroid.org . www/translate/res
+
+rm -rf res/values
+
+php $0.php
+
+echo 'Copy new translation files to our SVN dev directory.'
+cp -rf res ../transdroid/
+

@@ -1,0 +1,4 @@
+
+echo 'Send base strings.xml file from our SVN working copy.'
+ncftpput -u droid -F transdroid.org www/translate/res/values ../transdroid/res/values/strings.xml
+
